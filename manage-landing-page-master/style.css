@@ -128,9 +128,7 @@ button{
     font-size: 1.35vw;
     padding-right: 25%;
 }
-.project-body-col-4{
-    /* width: 70%; */
-}
+
 .project-body-col-4 div{
     display: flex;
     justify-content: space-between;
