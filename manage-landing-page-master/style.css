@@ -9,6 +9,9 @@ body{
     background-position-y: -10%;
     background-position-x: 120%;
 }
+.top-menu-text-mobile{
+    display: none;
+}
 button{
     cursor: pointer;
     font-family: 'Be Vietnam Pro', sans-serif;
@@ -128,6 +131,9 @@ button{
     font-size: 1.35vw;
     padding-right: 25%;
 }
+.project-body-col-4-mobile{
+    display: none;
+}
 
 .project-body-col-4 div{
     display: flex;
@@ -172,6 +178,7 @@ button{
 #section-3 h2{
     text-align: center;
     font-size: 1.5vw;
+    color: hsl(228, 39%, 23%) ;
 }
 .testimonial {
     padding: 2em 0;
@@ -274,13 +281,13 @@ button{
     grid-template-columns: repeat(4, 1fr);
     padding: 2vh 0;
 }
+
 #section-5 div div{
-    display: block!important;
+    display: block;
 }
-
-/* .fst-child{
-
-} */
+.s-t-child-mobile{
+    display: none!important;
+}
 .fst-child p{
     width: fit-content;
     padding: 2.5% ;
@@ -312,7 +319,7 @@ button{
     font-size: 1.35vw;
 }
 
-.sec-child p:hover,.thd-child p:hover{
+.sec-child p:hover,.thd-child p:hover,.sec-child-mobile p:hover,.thd-child-mobile p:hover{
     color: hsl(12, 88%, 59%) ;
 }
 
@@ -347,6 +354,24 @@ button{
 .frth-child button:hover{
     background-color: hsl(12, 57%, 67%); 
 }
+.div{
+    display: none;
+}
+@media screen and (max-width:1000px){
+    .top-menu- button{
+        padding:1vh 1.5vw ;
+        border-radius: 1.25vw;
+    }
+    .project-body-col-2 button{
+        padding:1vh 1.5vw ;
+        border-radius: 1.25vw;
+    }
+    .section-3 button{
+        padding:1vh 1.5vw ;
+        border-radius: 2vw;
+    }
+}
+
 @media screen and (max-width:800px) {
     /* .testimonials{
         display: none;
@@ -355,6 +380,21 @@ button{
         background-position-y: -5%;
         /* background-position-x: -220%; */
         background-size: contain;
+        position: relative;
+    }
+    .body::after{
+        background-color: rgba(0,0,0,0.3 );
+    }
+    .top-menu-text-mobile{
+        display: none;
+        z-index: 1;
+        position: absolute;
+        background-color: white;
+        top:7.5vh;
+        width: 90vw;
+        height: max-content;
+        padding: 5% 0;
+        text-align: center;
     }
     .top-menu{
         display: none;
@@ -362,6 +402,10 @@ button{
     .top-menu-mobile{
         display: flex;
         justify-content: space-between;
+    }
+    .top-menu-icon img{
+        width: 70%;
+        height: auto;
     }
     .project-body{
         display: flex;
@@ -372,15 +416,33 @@ button{
     .project-body-mobile{
         display: block;
     }
+    .project-body-col-1-mobile{
+        margin: 2.5vh 0;
+    }
     .project-body-col-1-mobile img{
         width: 100%;
+    }
+    .project-body-col-2-mobile{
+        margin: 2.5vh 0;
     }
     .project-body-col-2-mobile h1{
         font-size: 9vw;
         color: hsl(228, 39%, 23%) ;
     }
+    .project-body-col-2-mobile p{
+        font-size: 6vw;
+        padding: 0 5% ;
+    }
     .project-body-col-2-mobile button{
-        font-size: 5vw;
+        font-size: 3vw;
+        width: fit-content;
+        background-color: hsl(12, 88%, 59%);
+        color: white;
+        border:none ;
+        padding: 1.5vh 7.5vw;
+        border-radius: 20px;
+        width: fit-content;
+        box-shadow: 0px 6px 10px rgb(242 95 58 / 65%);
     }
     
     .project-body-col-1{
@@ -397,6 +459,154 @@ button{
         width: 100%;
         padding: 0;
     }
+    .project-body-col-3{
+        margin: 1.25vh 0;
+        text-align: center;
+        padding: 0;
+    }
+    .project-body-col-3 h2{
+        font-size: 3.25vh;
+        padding: 0 5%;
+    }
+    .project-body-col-3 p{
+        font-size: 3.5vw;
+        line-height: 1.5;
+        font-stretch: expanded;
+        padding: 0 5%;
+    }
+    .project-body-col-4{
+        display: none;
+    }
+    .project-body-col-4-mobile{
+        display: block;
+        margin: 0 -10%;
+    }
+    .project-body-col-4-mobile div p{
+        background-color: blanchedalmond;
+        padding: 1.5vh 0;
+        width: 100vw;
+        text-align: left
+    }
+    .project-body-col-4-mobile div p span:nth-child(1){
+        background-color: hsl(12, 88%, 59%);
+        color: white !important;
+        height: max-content;
+        width: fit-content;
+        text-align: center;
+        border-radius: 1em;
+        font-size: 4.5vw;
+        padding: 1.5vh 5vw;
+    }
+    .project-body-col-4-mobile div p span:nth-child(2){
+        font-size: 4.5vw;
+        color: hsl(228, 39%, 23%) ;
+        margin-bottom: 0;
+        font-weight: bolder;
+        margin: 0 1vw;
+    }
+    .project-body-col-4-mobile div h5{
+        color:  hsl(227, 12%, 61%) ;
+        font-weight: 400;
+        text-align: left;
+        padding: 0 2.5%;
+    }
+    #section-3 h2{
+        font-size: 9vw;
+    }
+    .quote{
+        width: 50vw;
+        margin-bottom: 0;
+    }
+    .quote img{
+        /* height: 3vh; */
+        /* width: 50%; */
+        float: center;
+    }
+    .quote h5{
+        font-size: 5vw;
+    }
+    .quote p {
+        font-size: 4.5vw;
+        padding: 0 2.5%;
+    }
+    #section-3 button{
+        font-size: 3vw;
+        width: fit-content;
+        background-color: hsl(12, 88%, 59%);
+        color: white;
+        border:none ;
+        padding: 1.5vh 7.5vw;
+        border-radius: 20px;
+        width: fit-content;
+        margin-left: 35vw;
+        outline: none;
+    }
+    #section-4 div{
+        display: block;
+        text-align: center;
+        padding: 10% 0;
+    }
+    #section-4  div h3{
+        font-size: 9vw;
+        width: 100%;
+    }
+    #section-4  div button{
+        font-size: 3vw;
+        width: fit-content;
+        padding: 1.5vh 7.5vw;
+        border-radius: 20px;
+        outline: none;
+    }
+    #section-5 div{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    /* .div{
+        display: flex;
+        flex-direction: row;
+    } */
+    .frth-child input{
+        width: 75%;
+        float: left;
+    }
+    .frth-child button{
+        width: 20%;
+        outline: none;
+        border: none;
+        font-size: 4.5vw;
+    }
+    .frth-child p {
+        display: none;
+    }
+    .sec-child, .thd-child{
+        display: none!important;
+    }
+    .fst-child{
+        display:flex !important;
+        flex-direction: column-reverse;
+        margin-top: -20%;
+    }
+    .fst-child h5{
+        width: 100%;
+    }
+    .fst-child h5 img{
+        width: 9vw;
+        margin:  0 auto;
+    }
+    .fst-child p {
+        margin-left: 25%;
+    }
+    .fst-child p img{
+        width: 75%;
+        padding: 0;
+    }
+    .s-t-child-mobile{
+        display: flex !important;;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0;
+    }
+
 }
 @media screen and (max-width:600px) {
     /* .top-menu{
@@ -406,142 +616,16 @@ button{
         display: flex;
         justify-content: space-between;
     } */
+    .quote {
+        width: 90%;
+        margin: 0 1em;
+    }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .attribution{
+.attribution{
     font-size: 11px;
     text-align: center;
 }
 .attribution a{
     color: hsl(228, 45%, 44%) ;
-} */
+}
